@@ -4,5 +4,7 @@ LABEL org.label-schema.vcs-url="https://github.com/Dwolla/jenkins-agent-docker-a
 
 USER root
 RUN apk add --update python py-pip python-dev && \
-    pip install awscli
+    pip install awscli && \
+    rm -rf /var/cache/apk/*
+
 USER jenkins
