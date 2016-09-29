@@ -3,7 +3,7 @@ MAINTAINER Dwolla Dev <dev+jenkins-aws-tools@dwolla.com>
 LABEL org.label-schema.vcs-url="https://github.com/Dwolla/jenkins-agent-docker-awscli"
 
 USER root
-RUN apk add --update python py-pip python-dev && \
+RUN apk add --update python py-pip python-dev jq && \
     pip install awscli && \
     rm -rf /var/cache/apk/*
 
